@@ -19,8 +19,9 @@ public class boutonSonControleur implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         try {
+            File son = new File("./soundBox/bruit-dexplosion.wav");
             String soundName = "yourSound.wav";
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\tangu\\Downlods\\projetS2-2021-02-FS-master\\testSon\\src\\soundBox\\bruit-dexplosion.wav").getAbsoluteFile());
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/soundBox/bruit-dexplosion.wav"));
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
